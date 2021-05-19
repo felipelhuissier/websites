@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+:root {
+	--color1: #35526E;
+	--color2: #3083C1;
+	--color3: #2972AD;
+	--grayFont: #444444;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body {
+	font-family:'Rubik', sans-serif;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+nav {
+	position: fixed;
+	display: flex;
+	width: 100%;
+	background-color: var(--color1, #35526E);
+	color: white;
+}
+#logoNav {
+	max-width: 20%;
+	height: auto;
+}
+nav ul {
+	list-style: none;
+}
+.submenu {
+	background: var(--color2, #3083C1);
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	border-radius: 4px;
+}
+/*.navMenu li {
+	display: flex;
+}
+*/
+.submenu li {
+	display: inherit;
+}
+.submenu li:hover {
+	background-color: var(--color3);
+}
+
+
+
+@media (min-width: 961px) {
+	#logoNav {
+		max-width: 15%;
+		height: auto;
+	}
+	nav ul {
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		margin-top: 40px;
+	}	
+	nav ul li {
+			padding: 0px 15px 0px 15px;
+		}
+	#portada {
+		display: grid;
+		width: 100%;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: 800px;
+	}
+	#seccion1 {
+		background: url('../imagenes/portada1.jpg');
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+	#botonOferta:hover {
+		color: var(--color1);
+	}
+	#seccion2 {
+		background-image: url('../imagenes/portada2.jpg');
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+}
+/* Formato para tablets */
+@media (min-width: 481px) and (max-width: 960px) {
+	#menu {
+		display: none;
+	}
+}
+/* Formato para teléfonos móviles */
+@media (max-width: 480px) {
+	nav {
+		display: grid;
+		grid-template-columns: 85% 15%;
+	}
+	#menu {
+		display: none;
+		
+	}
+	#logoNav {
+	max-width: 70%;
+	height: auto;
+	}
+	#menuIcon {
+		float: right;
+		margin-top: 10px;
+	}
+	.menuIcon {
+		width: 30px;
+		height: 3px;
+		background-color: white;
+		margin: 5px;
+		border-radius: 5px;
+		right: 5px;
+	}
+	#portada {
+		display: grid;
+		grid-template-columns: 1fr;
+		width: 100%;
+		height: 900px;
+	}
+	#seccion1 {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		grid-template-rows: 5fr 1fr;
+		background-image: url('../imagenes/portadamovil.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		align-items: end;
+	}
+	#contenidoOferta1 {
+		background-color: var(--color2);
+		opacity: 1;
+		color: white;
+	}
+	#contenidoOferta1 h2 {
+		padding: 20px;
+		text-align: center;
+	}
+	#botonOferta1 {
+		background-color: var(--color1);
+		color: white;
+		width: 45vw;
+		height: 10vw;
+		border-style: none;
+		border-radius: 10px;
+		font-size: 5vw;
+		animation-name: aparecer;
+		animation-duration: 4s;
+		opacity: none;
+		align-self: center;
+	}
+	@keyframes aparecer {
+	0% {
+		opacity: 0.1;
+	}
+	50% {
+		opacity: 0.5
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+	#seccion2 {
+		background-image: url('../imagenes/portadamovil2.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}
