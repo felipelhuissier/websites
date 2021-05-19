@@ -4,6 +4,7 @@
 	--color1: #35526E;
 	--color2: #3083C1;
 	--color3: #2972AD;
+	--color4: #E7F1F9;
 	--grayFont: #444444;
 }
 
@@ -15,6 +16,9 @@
 body {
 	font-family:'Rubik', sans-serif;
 }
+.importante {
+	font-weight: bold;
+}
 a {
 	text-decoration: none;
 	color: inherit;
@@ -25,6 +29,7 @@ nav {
 	width: 100%;
 	background-color: var(--color1, #35526E);
 	color: white;
+	z-index: 9999;
 }
 #logoNav {
 	max-width: 20%;
@@ -124,18 +129,20 @@ nav ul {
 		height: 900px;
 	}
 	#seccion1 {
-		display: grid;
-		grid-template-columns: 1fr 2fr;
-		grid-template-rows: 5fr 1fr;
 		background-image: url('../imagenes/portadamovil.jpg');
 		background-repeat: no-repeat;
 		background-size: cover;
-		align-items: end;
 	}
 	#contenidoOferta1 {
-		background-color: var(--color2);
-		opacity: 1;
-		color: white;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: var(--color4);
+		opacity: 0.85;
+		color: var(--color2);
+		margin: 40vw 20vw;
+		border-radius: 10px;
+		margin-bottom: auto;
 	}
 	#contenidoOferta1 h2 {
 		padding: 20px;
@@ -152,7 +159,6 @@ nav ul {
 		animation-name: aparecer;
 		animation-duration: 4s;
 		opacity: none;
-		align-self: center;
 	}
 	@keyframes aparecer {
 	0% {
