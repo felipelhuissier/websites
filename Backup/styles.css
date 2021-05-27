@@ -25,7 +25,6 @@ a {
 	color: inherit;
 }
 nav {
-	z-index: 1;
 	position: fixed;
 	display: flex;
 	width: 100%;
@@ -239,8 +238,8 @@ footer {
 		padding: 8px;
 		font-size: 14px;
 	}
-	#enlaces a {
-		padding: 10px;
+	#enlaces p {
+		padding: 24px;
 	}
 	.footerLogo {
 		max-width: 1.8vw;
@@ -417,29 +416,11 @@ footer {
 		flex-direction: column;
 		align-items: center;
 	}
-	#enlaces a {
-		padding: 8px;
+	.enlaces {
+		padding: 4px;
 	}
 	.footerLogo {
 		max-width: 5vw;
 		height: auto;
 	}
 }
-
-@media (max-width: 480px) and (orientation: landscape) {
-
-    html {
-      /* Rotate the content container */
-        transform: rotate(-90deg);
-        transform-origin: left top;
-        /* Set content width to viewport height */
-        width: 100vh;
-        /* Set content height to viewport width */
-        height: 100vw;
-        overflow-x: hidden;
-        position: absolute;
-        top: 100%;
-        left: 0;
-      }
-}
-

@@ -25,48 +25,34 @@ a {
 	color: inherit;
 }
 nav {
-	z-index: 1;
 	position: fixed;
 	display: flex;
 	width: 100%;
 	background-color: var(--color1, #35526E);
 	color: white;
+	z-index: 9999;
 }
-nav h2 {
-	font-weight: lighter;
+#logoNav {
+	max-width: 20%;
+	height: auto;
 }
-a {
-	text-decoration: none;
-	color: inherit;
-}
-nav li {
+nav ul {
 	list-style: none;
 }
-#telephoneNav {
-	display: flex;
-	background-color: #34922F;
-	position: relative;
-	border-radius: 60px;
-	text-align: center;
-	padding:6px 0 6px 0;
-	font-size: 14px;
-}
-#logoTelefono {
-	max-width: 9%;
-	margin: auto 4px auto 10px;
-}
-#socialIcons {
-	margin-left: 56px;
-	padding: 8px;
-}
-.navSocial {
-	width: 32px;
-	margin: 8px 10px 0 0;
-	border: solid white 1px;
+.submenu {
+	background: var(--color2, #3083C1);
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 	border-radius: 4px;
 }
-#menuIcon {
-	display: none;
+/*.navMenu li {
+	display: flex;
+}
+*/
+.submenu li {
+	display: inherit;
+}
+.submenu li:hover {
+	background-color: var(--color3);
 }
 footer {
 	background-color: var(--color1);
@@ -79,51 +65,31 @@ footer {
 	#logoNav {
 		max-width: 12%;
 		height: auto;
-		margin-right: 3vw;
 	}
-	#menu {
-		position: relative;
+	nav ul {
 		display: flex;
-	}
-	#menu h2 {
-		font-size: 14px;
-	}
-	.menuOpt {
-		padding-top: 15px;
-		width: 100px;
-		height: 40px;
-		margin: 15px 2.5px 0 0;
-		text-align: center;
-	}
-	.menuOpt:hover {
+		align-items: center;
+	}	
+	nav ul li {
+			position: relative;
+			display: flex;
+			width: 7vw;
+			height: 3vw;
+			justify-content: center;
+			align-items: center;
+			margin: 1vw 0.3vw 0 0;
+			text-align: center;
+		}
+	.navMenu li:hover {
 		background-color: var(--color2);
 	}
-	.submenuLi {
+	.submenu {
 		display: none;
 		position: absolute;
 		z-index: 1;
-		width: 200px;
-		background-color: var(--color2);
-		color: white;
-		list-style: none;
-		margin-left: 0;
 	}
-	.submenuLi li {
-		width: 100%;
-		padding: 0.5vw;
-		text-align: left;
-	}
-	.menuOpt li:hover {
-		background-color: var(--color3);
-	}
-	.menuOpt:hover .submenuLi {
+	.navMenu li:hover .submenu {
 		display: block;
-	}
-	#telephoneNav {
-		width: 120px;
-		height: 28px;
-		margin-top: 20px;
-		margin-left: 40px;
 	}
 
 	#portada {
@@ -239,8 +205,8 @@ footer {
 		padding: 8px;
 		font-size: 14px;
 	}
-	#enlaces a {
-		padding: 10px;
+	#enlaces p {
+		padding: 24px;
 	}
 	.footerLogo {
 		max-width: 1.8vw;
@@ -262,58 +228,31 @@ footer {
 }
 /* Formato para teléfonos móviles */
 @media (max-width: 480px) {
-	#logoNav {
-		max-width: 50%;
-		margin-left: 25%;
-	}
 	nav {
-		display: flex;
-		position: fixed;
-		height: 60px;
+		display: grid;
+		grid-template-columns: 85% 15%;
 	}
 	#menu {
 		display: none;
-		position: absolute;
-		top: 60px;
-		background-color: var(--color2);
-		width: 100%;
+		
 	}
-	.menuOpt {
-		padding: 10px;
-		font-size: 22px;
-		border-bottom: solid white 1px;
-	}
-	.menuOpt h2 {
-		font-size: 22px;
-	}
-	.menuOpt:hover {
-		background-color: var(--color3);
-	}
-	#home {
-		font-size: 22px;
-	}
-	#socialIcons {
-		display: none;
-		width: 0px;
-	}
-	#telephoneNav {
-		display: none;
-		width: 0px;
+	#logoNav {
+	max-width: 65%;
+	height: auto;
 	}
 	#menuIcon {
-		display: block;
-		position: fixed;
+		float: right;
 		margin-top: 10px;
 	}
 	.menuIcon {
-		width: 48px;
-		height: 5px;
+		width: 12vw;
+		height: 1vw;
 		background-color: white;
-		margin: 6px;
+		margin: 2vw 10vw 0vw 0vw;
+		
+		margin-bottom: 2vw;
 		border-radius: 5px;
-	}
-	.submenuLi {
-		display:  none;
+		right: 5px;
 	}
 	#portada {
 		display: flex;
@@ -417,29 +356,11 @@ footer {
 		flex-direction: column;
 		align-items: center;
 	}
-	#enlaces a {
-		padding: 8px;
+	.enlaces {
+		padding: 4px;
 	}
 	.footerLogo {
 		max-width: 5vw;
 		height: auto;
 	}
 }
-
-@media (max-width: 480px) and (orientation: landscape) {
-
-    html {
-      /* Rotate the content container */
-        transform: rotate(-90deg);
-        transform-origin: left top;
-        /* Set content width to viewport height */
-        width: 100vh;
-        /* Set content height to viewport width */
-        height: 100vw;
-        overflow-x: hidden;
-        position: absolute;
-        top: 100%;
-        left: 0;
-      }
-}
-

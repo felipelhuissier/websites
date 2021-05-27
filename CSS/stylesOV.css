@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+:root {
+	--color1: #35526E;
+	--color2: #3083C1;
+	--color3: #2972AD;
+	--color4: #E7F1F9;
+	--grayFont: #444444;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body {
+	font-family:'Rubik', sans-serif;
+}
+nav {
+	position: fixed;
+	display: flex;
+	width: 100%;
+	background-color: var(--color1, #35526E);
+	color: white;
+}
+nav h2 {
+	font-weight: lighter;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+nav li {
+	list-style: none;
+}
+#telephoneNav {
+	display: flex;
+	background-color: #34922F;
+	position: relative;
+	border-radius: 60px;
+	text-align: center;
+	padding:6px 0 6px 0;
+	font-size: 14px;
+}
+#logoTelefono {
+	max-width: 9%;
+	margin: auto 4px auto 10px;
+}
+#socialIcons {
+	margin-left: 56px;
+	padding: 8px;
+}
+.navSocial {
+	width: 32px;
+	margin: 8px 10px 0 0;
+	border: solid white 1px;
+	border-radius: 4px;
+}
+#menuIcon {
+	display: none;
+}
+
+@media (min-width: 961px) {
+	#logoNav {
+		max-width: 12%;
+		height: auto;
+		margin-right: 3vw;
+	}
+	#menu {
+		position: relative;
+		display: flex;
+	}
+	#menu h2 {
+		font-size: 14px;
+	}
+	.menuOpt {
+		padding-top: 15px;
+		width: 100px;
+		height: 40px;
+		margin: 15px 2.5px 0 0;
+		text-align: center;
+	}
+	.menuOpt:hover {
+		background-color: var(--color2);
+	}
+	.submenuLi {
+		display: none;
+		position: absolute;
+		z-index: 1;
+		width: 200px;
+		background-color: var(--color2);
+		color: white;
+		list-style: none;
+		margin-left: 0;
+	}
+	.submenuLi li {
+		width: 100%;
+		padding: 0.5vw;
+		text-align: left;
+	}
+	.menuOpt li:hover {
+		background-color: var(--color3);
+	}
+	.menuOpt:hover .submenuLi {
+		display: block;
+	}
+	#telephoneNav {
+		width: 120px;
+		height: 28px;
+		margin-top: 20px;
+		margin-left: 40px;
+	}
+}
+@media (max-width: 480px) {
+	#logoNav {
+		max-width: 50%;
+		margin-left: 25%;
+	}
+	nav {
+		display: flex;
+		position: fixed;
+		height: 60px;
+	}
+	#menu {
+		display: none;
+		position: absolute;
+		top: 60px;
+		background-color: var(--color2);
+		width: 100%;
+	}
+	.menuOpt {
+		padding: 10px;
+		font-size: 22px;
+		border-bottom: solid white 1px;
+	}
+	.menuOpt h2 {
+		font-size: 22px;
+	}
+	.menuOpt:hover {
+		background-color: var(--color3);
+	}
+	#home {
+		font-size: 22px;
+	}
+	#socialIcons {
+		display: none;
+		width: 0px;
+	}
+	#telephoneNav {
+		display: none;
+		width: 0px;
+	}
+	#menuIcon {
+		display: block;
+		position: fixed;
+		margin-top: 10px;
+	}
+	.menuIcon {
+		width: 48px;
+		height: 5px;
+		background-color: white;
+		margin: 6px;
+		border-radius: 5px;
+	}
+	.submenuLi {
+		display:  none;
+	}
+}
